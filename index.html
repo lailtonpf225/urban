@@ -237,42 +237,24 @@
       </button>
     </div>
 
-    <!-- Barra Compacta: Formas de Pagamento + Localização / Rota GPS -->
+    <!-- Barra Compacta: Formas de Pagamento -->
     <section class="gold-border-card rounded-2xl p-4 sm:p-5 mt-6">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <!-- Formas de Pagamento Pequenas e Discretas -->
-        <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
-          <span class="text-xs uppercase tracking-wider text-gold-400 font-semibold mr-1">
-            Formas de Pagamento:
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-espresso-900/90 border border-gold-400/30 text-gold-200">
-            💵 Dinheiro
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-espresso-900/90 border border-gold-400/30 text-gold-200">
-            ⚡ Pix
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-espresso-900/90 border border-gold-400/30 text-gold-200">
-            💳 Débito
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-espresso-900/90 border border-gold-400/30 text-gold-200">
-            💳 Crédito Parcelado
-          </span>
-        </div>
-
-        <!-- Botão de Abrir Localização / Rota -->
-        <div class="w-full md:w-auto flex justify-center md:justify-end shrink-0">
-          <button
-            id="btn-abrir-rota-rodape"
-            type="button"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gold-500/20 text-gold-200 border border-gold-400/50 hover:bg-gold-500/30 transition-all"
-          >
-            <svg class="w-4 h-4 text-gold-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-            <span>Traçar Rota no Mapa / GPS</span>
-          </button>
-        </div>
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <span class="text-xs uppercase tracking-wider text-gold-400 font-semibold mr-1">
+          Formas de Pagamento:
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-espresso-900/90 border border-gold-400/30 text-gold-200">
+          💵 Dinheiro
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-espresso-900/90 border border-gold-400/30 text-gold-200">
+          ⚡ Pix
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-espresso-900/90 border border-gold-400/30 text-gold-200">
+          💳 Débito
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-espresso-900/90 border border-gold-400/30 text-gold-200">
+          💳 Crédito Parcelado
+        </span>
       </div>
     </section>
 
@@ -1344,7 +1326,6 @@
 
       const gpsModal = document.getElementById("gps-modal");
       const btnRotaTopo = document.getElementById("btn-abrir-rota-topo");
-      const btnRotaRodape = document.getElementById("btn-abrir-rota-rodape");
       const btnFecharGps = document.getElementById("btn-fechar-modal-gps");
 
       function abrirModalGps() {
@@ -1355,7 +1336,6 @@
       }
 
       if (btnRotaTopo) btnRotaTopo.addEventListener("click", abrirModalGps);
-      if (btnRotaRodape) btnRotaRodape.addEventListener("click", abrirModalGps);
       if (btnFecharGps) btnFecharGps.addEventListener("click", fecharModalGps);
       if (gpsModal) {
         gpsModal.addEventListener("click", (e) => {
